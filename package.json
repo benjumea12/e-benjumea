@@ -1,0 +1,22 @@
+{
+  "name": "my-briefcase",
+  "version": "1.0.0",
+  "private": true,
+  "description": "My Briefcase",
+  "author": "Esteban Benjumea",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "gatsby": "^3.14.3",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}
