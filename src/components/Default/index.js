@@ -1,0 +1,1 @@
+export { desfault } from "./Void.js"
