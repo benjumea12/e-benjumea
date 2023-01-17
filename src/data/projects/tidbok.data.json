@@ -4,7 +4,7 @@
     "title": "TidBok",
     "startImg": "https://i.imgur.com/rl7poNI.png",
     "startText": "Permite llevar un registro de los tiempos y progresos de los deportistas.",
-    "description": "Le va a permitir al los usuarios medir su tiempo y progreso en sus recorridos favoritos, generar gráficas y estadísticas que le permitan saber como avanza su entrenamiento, también le permitirá agregar otros deportistas y crear un equipo donde se puedan competir entre ellos. (Proyecto personal)",
+    "presentation": "Le va a permitir al los usuarios medir su tiempo y progreso en sus recorridos favoritos, generar gráficas y estadísticas que le permitan saber como avanza su entrenamiento, también le permitirá agregar otros deportistas y crear un equipo donde se puedan competir entre ellos. (Proyecto personal)",
     "development": "React JS, Redux, TypeScript, Styled Components",
     "links": [
         {
