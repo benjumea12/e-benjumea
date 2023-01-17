@@ -4,7 +4,6 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
 
-  // File nodes from src/data/projects
   if (node.internal.type === `File`) {
 
     const res = createFilePath({ node, getNode, basePath: `pages` }).split('.')

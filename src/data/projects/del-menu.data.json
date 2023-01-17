@@ -1,0 +1,24 @@
+{
+    "path": "delmenu",
+    "order": 6,
+    "title": "DelMenu",
+    "startImg": "https://i.imgur.com/jT1136S.jpg",
+    "startText": "La comida familiar de toda la vida, ahora más cerca de ti..",
+    "presentation": "App de corrientasos para restaurantes. (Proyecto desarrollado en @SOLUCIONSOFT)",
+    "description": "",
+    "development": "React Native, Expo, React Hooks, TypeScript, expo-maps, expo-geolocation, expo-push-notifications",
+    "links": [
+        { 
+            "name": "Redes" ,
+            "link": "https://www.facebook.com/Delmenuco/"
+        }
+    ],
+    "gallery": [
+        {
+            "name": "",
+            "images": [
+                "https://i.imgur.com/jT1136S.jpg", "https://i.imgur.com/wkHBL8D.jpg", "https://i.imgur.com/sUCUmLO.jpg", "https://i.imgur.com/nhtiKBQ.jpg", "https://i.imgur.com/Hmj5rnL.jpg", "https://i.imgur.com/D4QYQkt.jpg", "https://i.imgur.com/MVABKAy.jpg"
+            ]
+        }
+    ]
+}

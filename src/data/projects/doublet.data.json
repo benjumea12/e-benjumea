@@ -4,9 +4,9 @@
     "title": "Doublet",
     "startImg": "https://i.imgur.com/kU7gy6p.png",
     "startText": "Entrena tu habilidad mental.",
-    "presentation": "Entrena tu habilidad mental.",
+    "presentation": "Entrena tu habilidad mental. (Proyecto personal)",
     "description": "",
-    "development": "La app esta desarrollada utilizando React Native y React Hooks.",
+    "development": "React Native, React Hooks, TypeScript",
     "links": [
         { 
             "name": "APK de la app" ,

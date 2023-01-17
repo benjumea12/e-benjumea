@@ -1,12 +1,11 @@
 {
     "path": "tidbok",
-    "order": 1,
+    "order": 2,
     "title": "TidBok",
     "startImg": "https://i.imgur.com/rl7poNI.png",
     "startText": "Permite llevar un registro de los tiempos y progresos de los deportistas.",
-    "presentation": "TidBok es un proyecto personal que surgió de mi experiencia entrenando ciclismo. Es una aplicación que le permitirá a los deportistas y entrenadores llevar un registro de tiempos y progresos con un diseño moderno y con funciones especificas para cumplir su propósito en deportes como el ciclismo y el atletismo.",
-    "description": "Le va a permitir al los usuarios medir su tiempo y progreso en sus recorridos favoritos, generar gráficas y estadísticas que le permitan saber como avanza su entrenamiento, también le permitirá agregar otros deportistas y crear un equipo donde se puedan competir entre ellos.",
-    "development": "El el diseño del proyecto se desarrolla en Adobe XD, utiliza las tecnologías de de React para la aplicación web, React Native para ta aplicación móvil, ambas utilizando componentes UI propios con la librería Styled-Components y el backend utiliza Node js. El prototipo de la aplicación esta web desarrollada utilizando React-Hooks  y React-TypeScrip., utiliza componentes UI y animaciones propias sin utilizar componentes UI externos.",
+    "description": "Le va a permitir al los usuarios medir su tiempo y progreso en sus recorridos favoritos, generar gráficas y estadísticas que le permitan saber como avanza su entrenamiento, también le permitirá agregar otros deportistas y crear un equipo donde se puedan competir entre ellos. (Proyecto personal)",
+    "development": "React JS, Redux, TypeScript, Styled Components",
     "links": [
         {
             "name": "Diseño del proyecto",

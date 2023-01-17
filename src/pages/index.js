@@ -42,7 +42,7 @@ const IndexPage = ({ data }) => {
             </div>
 
             <div className="proyects">
-                <Typography variant="h2" text="Mis proyectos." />
+                <Typography variant="h2" text="Mis proyectos favoritos." />
 
               {/* Map all projects pages of the json archive data `src/data/projects` */}
               <div className="list">

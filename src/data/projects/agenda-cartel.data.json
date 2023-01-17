@@ -1,0 +1,24 @@
+{
+    "path": "agenda-cartel",
+    "order": 5,
+    "title": "Agenda Cartel",
+    "startImg": "https://i.imgur.com/z6WQQS1.png",
+    "startText": "Plataforma de difusión de la movida cultural alternativa en Colombia y Latinoamérica.",
+    "presentation": "Sistema de administracion de eventos y productos. Se desarrolló sitio web, dashboard y cms de productos con Wordpress (Proyecto desarrollado en @SOLUCIONSOFT)",
+    "description": "",
+    "development": "React JS, Redux, TypeScript, Sass, WordPress",
+    "links": [
+        { 
+            "name": "Link del sitio" ,
+            "link": "https://agendacartel.com/"
+        }
+    ],
+    "gallery": [
+        {
+            "name": "",
+            "images": [
+                "https://i.imgur.com/z6WQQS1.png", "https://i.imgur.com/g7cdTgj.png", "https://i.imgur.com/CI7r31i.png", "https://i.imgur.com/JLQifI8.png", "https://i.imgur.com/Kx6nLJe.png", "https://i.imgur.com/CI7r31i.png", "https://i.imgur.com/ebfSKCZ.png", "https://i.imgur.com/ohLP46s.png", "https://i.imgur.com/BzTnEr2.png", "https://i.imgur.com/Ip1o5Is.png", "https://i.imgur.com/ukKc0ku.png"
+            ]
+        }
+    ]
+}

@@ -66,7 +66,7 @@ const TemplatePage = ({ data }) => {
           )}
           {page.development !== "" && (
             <section className="section development">
-              <Typography variant="h2" text="Desarrollo" />
+              <Typography variant="h2" text="Tecnologías" />
 
               <div className="text">
                 <Typography variant="p" delay={3} text={page.development} />
@@ -109,7 +109,6 @@ export const query = graphql`
       presentation
       startImg
       title
-      addText
       links {
         name
         link
