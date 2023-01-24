@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react"
 import "./style.css"
+// Framer motion
+import { motion } from "framer-motion"
 // Styled components
 import { ThemeProvider } from "styled-components"
 import { Main } from "./Layout.styled"
@@ -7,14 +9,39 @@ import { Main } from "./Layout.styled"
 import { theme } from "../../theme"
 
 export interface LayoutProps {
+  animate?: boolean
   children: any
 }
 
 const Layout = (props: LayoutProps) => {
+  const { animate } = props
   return (
     <ThemeProvider theme={theme}>
       <Main>
-        <div className="margin-border">{props.children}</div>
+        <motion.div
+          className="margin-border"
+          initial={
+            animate
+              ? {
+                  height: "100%",
+                  width: "100%",
+                }
+              : {
+                  height: "calc(100% - 5em)",
+                  width: "calc(100% - 5em)",
+                }
+          }
+          animate={{
+            height: "calc(100% - 5em)",
+            width: "calc(100% - 5em)",
+          }}
+          transition={{
+            delay: 1,
+            duration: 0.3,
+          }}
+        >
+          {props.children}
+        </motion.div>
       </Main>
     </ThemeProvider>
   )
