@@ -1,5 +1,7 @@
 // Styled components
 import styled from "styled-components"
+// Theme
+import { media } from "../theme"
 
 export const Main = styled.div`
   display: flex;
@@ -17,15 +19,15 @@ export const Main = styled.div`
     text-align: right;
     h1 {
       overflow: hidden;
-      text-align: center;
     }
   }
 
   .section-projects {
     top: 0;
+    position: fixed;
     max-height: 100%;
-    padding: 6em 10em 5em 10em;
-    width: 100%;
+    width: calc(100% - 28em);
+    padding: 6em 14em 5em 14em;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -39,6 +41,32 @@ export const Main = styled.div`
     .item {
       width: 45%;
       list-style: none;
+      &:nth-child(2n) {
+        transform: translateY(50%) !important;
+      }
+    }
+  }
+
+  @media (max-width: ${media.lg}) {
+    height: 90%;
+    .section-title {
+      right: 20px;
+      font-size: 16px;
+      h1 {
+        overflow: hidden;
+      }
+    }
+
+    .section-projects {
+      width: calc(100% - 8em);
+      padding: 13em 4em 500px 4em !important;
+      .item {
+        width: 90%;
+        list-style: none;
+        &:nth-child(2n) {
+        transform: translateY(0%) !important;
+      }
+      }
     }
   }
 `

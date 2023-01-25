@@ -1,8 +1,11 @@
 // Styled components
 import styled from "styled-components"
+// Theme
+import { media } from "../theme"
 
 export const Main = styled.div`
   position: fixed;
+  z-index: 2;
   width: calc(100% - 18em);
   margin-left: 8em;
   height: calc(100% - 12em);
@@ -26,7 +29,8 @@ export const Main = styled.div`
     .text {
       width: 40%;
       h5 {
-        font-size: 16px;
+        font-size: 18px;
+        overflow: hidden;
         a {
           color: ${(props) => props.theme.colors.dark};
         }
@@ -35,12 +39,18 @@ export const Main = styled.div`
       h1 {
         font-size: 38px;
         margin: 18px 0;
+        overflow: hidden;
+      }
+
+      p {
+        overflow: hidden;
       }
 
       .extra-info {
         display: flex;
         justify-content: space-between;
         margin-top: 2em;
+        overflow: hidden;
         h4 {
           font-size: 22px;
           margin-bottom: 10px;
@@ -104,7 +114,47 @@ export const Main = styled.div`
         
         cursor: pointer;
         font-size: 28px;
-        color: #FFFFFF;
+        color: #ffffff;
+      }
+    }
+  }
+
+  @media (max-width: ${media.lg}) {
+    width: calc(100% - 6em);
+    margin-left: 0em;
+    padding: 6em 3em 6em 4em;
+    .content-top {
+      flex-direction: column;
+      .text {
+        width: 100%;
+        text-align: right;
+        .extra-info {
+          text-align: left;
+        }
+        h1 {
+          width: 90%;
+          margin-left: 10%;
+        }
+      }
+      .image {
+        width: 90%;
+        margin-top: 2em;
+      }
+    }
+
+    .gallery-title {
+      font-size: 30px;
+      margin: 1em 0 1em 0;
+    }
+
+    .gallery {
+      width: 95%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      .image-item {
+        width: 45%;
+        margin-right: 5%;
       }
     }
   }
@@ -152,5 +202,8 @@ export const Image = styled.div`
       top: 0em;
       left: 0em;
     }
+  }
+  @media (max-width: ${media.lg}) {
+    margin-bottom: 2em;
   }
 `

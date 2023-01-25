@@ -97,7 +97,8 @@ const IndexPage: React.FC<PageProps> = () => {
                 opacity: 1,
               }}
               transition={{
-                delay: 1,
+                duration: .5,
+                delay: 0,
               }}
               exit={exit}
             >
@@ -195,7 +196,7 @@ const IndexPage: React.FC<PageProps> = () => {
               </motion.div>
             </motion.div>
             <motion.div exit={exit}>
-              <ButtonReturn onClick={handleClick} title="Proyectos paforitos" />
+              <ButtonReturn onClick={handleClick} title="Proyectos faforitos" />
             </motion.div>
           </Main>
         )}

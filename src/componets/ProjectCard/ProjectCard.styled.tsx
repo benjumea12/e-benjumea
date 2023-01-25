@@ -1,5 +1,7 @@
 // Styled components
 import styled from "styled-components"
+// Theme
+import { media } from "../../theme"
 
 export const Main = styled.div`
   width: 100%;
@@ -23,18 +25,18 @@ export const Main = styled.div`
   }
 
   .border-1 {
-    top: 1em;
-    left: 1em;
+    top: 8%;
+    left: 3%;
     transition: all 200ms 50ms ease-in-out;
   }
   .border-2 {
-    top: 2em;
-    left: 2em;
+    top: 16%;
+    left: 6%;
     transition: all 200ms 100ms ease-in-out;
   }
   .border-3 {
-    top: 3em;
-    left: 3em;
+    top: 24%;
+    left: 9%;
     transition: all 200ms 150ms ease-in-out;
   }
 
@@ -58,6 +60,7 @@ export const Main = styled.div`
       font-size: 35px;
       margin-bottom: 20px;
       text-decoration: underline;
+      text-align: center;
     }
   }
 
@@ -68,6 +71,17 @@ export const Main = styled.div`
     }
     .card-content {
       height: 102%;
+    }
+  }
+
+  @media (max-width: ${media.lg}) {
+    margin-bottom: 3em;
+
+    .card-content {
+      h2 {
+        font-size: 22px;
+        margin-bottom: 10px;
+      }
     }
   }
 `

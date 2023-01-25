@@ -1,5 +1,7 @@
 // Styled components
 import styled from "styled-components"
+// Theme
+import { media } from "../../theme"
 
 export const Main = styled.div`
   width: 50%;
@@ -8,5 +10,9 @@ export const Main = styled.div`
   right: -2em;
   .svg-pricess {
     width: 100%;
+  }
+  @media (max-width: ${media.lg}) {
+    width: 90%;
+    opacity: .5;
   }
 `

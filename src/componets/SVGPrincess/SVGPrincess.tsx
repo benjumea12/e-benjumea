@@ -5,9 +5,29 @@ import { motion } from "framer-motion"
 import { Main } from "./SVGPrincess.styled"
 
 const SVGArrow = () => {
+
+  const exit = {
+    opacity: 0,
+    transition: {
+      delay: 0,
+      duration: 0.3,
+    },
+  }
   return (
     <Main>
-      <motion.div>
+      <motion.div
+        initial={{
+          opacity: 0
+        }}
+        animate={{
+          opacity: 1
+        }}
+        transition={{
+          duration: .4,
+          delay: .5
+        }}
+        exit={exit}
+      >
         <svg
           viewBox="0 0 767 509"
           fill="none"

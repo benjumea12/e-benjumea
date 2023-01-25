@@ -1,0 +1,32 @@
+{
+  "slug": "del-menu",
+  "order": 6,
+  "personal": false,
+  "title": "DelMenu",
+  "startImg": "https://i.imgur.com/jT1136S.jpg",
+  "description": "",
+  "development": [
+    "React Native",
+    "Expo",
+    "React Hooks",
+    "TypeScript",
+    "expo-maps",
+    "expo-geolocation",
+    "expo-push-notifications"
+  ],
+  "links": [
+    {
+      "name": "Redes",
+      "link": "https://www.facebook.com/Delmenuco/"
+    }
+  ],
+  "gallery": [
+    "https://i.imgur.com/jT1136S.jpg",
+    "https://i.imgur.com/wkHBL8D.jpg",
+    "https://i.imgur.com/sUCUmLO.jpg",
+    "https://i.imgur.com/nhtiKBQ.jpg",
+    "https://i.imgur.com/Hmj5rnL.jpg",
+    "https://i.imgur.com/D4QYQkt.jpg",
+    "https://i.imgur.com/MVABKAy.jpg"
+  ]
+}

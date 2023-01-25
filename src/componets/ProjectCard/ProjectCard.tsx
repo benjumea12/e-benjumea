@@ -8,12 +8,13 @@ import { Main } from "./ProjectCard.styled"
 // Images
 import image from "../../images/cartel.png"
 
-const ProjectCard = (props: {}) => {
+const ProjectCard = (props: { project: any }) => {
+  const { project } = props
   return (
     <Main>
-      <img src={image} alt="Imagen del proyecto" />
+      <img src={project.startImg} alt={project.title} />
       <div className="card-content">
-        <h2>Nombre del proyecto</h2>
+        <h2>{project.title}</h2>
         <SVGArrow />
       </div>
       <motion.div className="border border-1"></motion.div>
