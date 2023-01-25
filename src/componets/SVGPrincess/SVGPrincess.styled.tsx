@@ -11,6 +11,7 @@ export const Main = styled.div`
   .svg-pricess {
     width: 100%;
   }
+  
   @media (max-width: ${media.lg}) {
     width: 100%;
     opacity: .5;
