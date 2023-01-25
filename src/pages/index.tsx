@@ -24,6 +24,7 @@ const IndexPage: React.FC<PageProps> = () => {
     x: 0,
     y: 0,
   })
+  /*
 
   var ancho = window.innerWidth / 2
   var alto = window.innerHeight / 2
@@ -47,6 +48,7 @@ const IndexPage: React.FC<PageProps> = () => {
       window.removeEventListener("mousemove", mousemove)
     }
   }, [])
+  */
 
   const handleClick = () => {
     setShowPage(false)
@@ -97,7 +99,7 @@ const IndexPage: React.FC<PageProps> = () => {
                 opacity: 1,
               }}
               transition={{
-                duration: .5,
+                duration: 0.5,
                 delay: 0,
               }}
               exit={exit}
