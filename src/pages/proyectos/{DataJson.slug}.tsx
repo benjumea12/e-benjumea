@@ -9,7 +9,7 @@ import { Layout } from "../../componets"
 // Frame motion
 import { motion, AnimatePresence } from "framer-motion"
 // Images
-import { GrClose } from "react-icons/Gr"
+import { GrClose } from "react-icons/gr"
 
 const ImagenDetalle = (props: { src: any; index: number; onClick: any }) => {
   return (
