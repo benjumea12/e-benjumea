@@ -25,7 +25,7 @@ export const Main = styled.div`
   .section-projects {
     top: 0;
     position: fixed;
-    max-height: 100%;
+    height: calc(100% - 6em - 5em);
     width: calc(100% - 28em);
     padding: 6em 14em 5em 14em;
     display: flex;
@@ -59,7 +59,8 @@ export const Main = styled.div`
 
     .section-projects {
       width: calc(100% - 8em);
-      padding: 13em 4em 500px 4em !important;
+      height: calc(100% - 13em - 5em);
+      padding: 13em 4em 5em 4em !important;
       .item {
         width: 90%;
         list-style: none;
