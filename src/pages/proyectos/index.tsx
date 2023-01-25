@@ -12,7 +12,10 @@ import { motion, AnimatePresence } from "framer-motion"
 const ProyectosPage = (props: PageProps<Queries.ProyectosPageQuery>) => {
   const [showPage, setShowPage] = useState(true)
 
-  const projectsData = props.data.allDataJson.edges
+  const projects: any = props.data.allDataJson.edges
+  const projectsData: any = projects.sort(
+    (a: any, b: any) => a.node.order - b.node.order
+  )
 
   const container = {
     hidden: {
@@ -86,7 +89,7 @@ const ProyectosPage = (props: PageProps<Queries.ProyectosPageQuery>) => {
                 initial="hidden"
                 animate="visible"
               >
-                {projectsData.map((item, index) => (
+                {projectsData.map((item: any, index: any) => (
                   <motion.li
                     key={item.node.slug}
                     className="item"
@@ -119,7 +122,7 @@ export const Head: HeadFC = () => <title>Home Page</title>
 
 export const query = graphql`
   query ProyectosPage {
-    allDataJson {
+    allDataJson(sort: { order: ASC }) {
       edges {
         node {
           slug

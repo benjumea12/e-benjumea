@@ -114,7 +114,7 @@ const DetallePage = (props: PageProps<Queries.DetallePageQuery>) => {
               </AnimatePresence>
               <div className="content-top">
                 <div className="text">
-                  {projectData ? (
+                  {projectData.personal ? (
                     <motion.h5
                       initial={{
                         height: 0,
@@ -142,7 +142,7 @@ const DetallePage = (props: PageProps<Queries.DetallePageQuery>) => {
                         delay: 5 * 0.5,
                       }}
                     >
-                      Desarrolado en{" "}
+                      Proyecto de{" "}
                       <a href="https://solucionsoft.com/" target="_blank">
                         @SOLUCIONSOFT
                       </a>

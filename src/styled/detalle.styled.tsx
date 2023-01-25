@@ -99,18 +99,23 @@ export const Main = styled.div`
     justify-content: center;
 
     .modal-image {
-      width: 80%;
+      width: 85%;
+     height: 85%;
       position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       .image {
-        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
         border: 2px solid ${(props) => props.theme.colors.dark};
       }
 
       .close {
         position: absolute;
-        top: -30px;
-        right: -30px;
+        top: 0;
+        right: 0;
         
         cursor: pointer;
         font-size: 28px;
@@ -131,9 +136,9 @@ export const Main = styled.div`
         .extra-info {
           text-align: left;
         }
-        h1 {
-          width: 90%;
-          margin-left: 10%;
+        h1, h5 {
+          width: 80%;
+          margin-left: 20%;
         }
       }
       .image {

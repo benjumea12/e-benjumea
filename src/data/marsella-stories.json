@@ -4,7 +4,7 @@
   "personal": true,
   "title": "Historias de Marsella",
   "startImg": "https://i.imgur.com/GySq5X6.png",
-  "description": "",
+  "description": "Proyecto creado como parte de un tesis universitaria de antropología sobre la violencia y cómo esta ha afectado a la comunidad en el municipio de Marsella/Risaralda.",
   "development": [
     "Gatsby JS",
     "React JS",

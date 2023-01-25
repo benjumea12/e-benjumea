@@ -12,7 +12,8 @@ export const Main = styled.div`
     width: 100%;
   }
   @media (max-width: ${media.lg}) {
-    width: 90%;
+    width: 100%;
     opacity: .5;
+    bottom: 15vh;
   }
 `

@@ -4,7 +4,7 @@
   "personal": true,
   "title": "Doublet",
   "startImg": "https://i.imgur.com/kU7gy6p.png",
-  "description": "",
+  "description": "App para entrenar tu habilidad mental",
   "development": ["React Native", "React Hooks", "TypeScript"],
   "links": [
     {
