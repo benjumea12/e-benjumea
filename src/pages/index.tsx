@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react"
 import type { HeadFC, PageProps } from "gatsby"
 import { navigate } from "gatsby"
-import { RiWhatsappFill } from "@react-icons/all-files/Ri/RiWhatsappFill"
-import { MdEmail } from "@react-icons/all-files/Md/MdEmail"
-import { AiFillLinkedin } from "@react-icons/all-files/Ai/AiFillLinkedin"
-import { AiOutlineGithub } from "@react-icons/all-files/Ai/AiOutlineGithub"
+import { RiWhatsappFill } from "react-icons/Ri"
+import { MdEmail } from "react-icons/Md"
+import { AiFillLinkedin, AiOutlineGithub } from "react-icons/Ai"
 // Framer motion
 import { motion, AnimatePresence } from "framer-motion"
 // Styled components

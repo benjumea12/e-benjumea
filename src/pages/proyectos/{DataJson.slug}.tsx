@@ -9,8 +9,7 @@ import { Layout } from "../../componets"
 // Frame motion
 import { motion, AnimatePresence } from "framer-motion"
 // Images
-import image from "../../images/cartel.png"
-import { GrClose } from "@react-icons/all-files/Gr/GrClose"
+import { GrClose } from "react-icons/Gr"
 
 const ImagenDetalle = (props: { src: any; index: number; onClick: any }) => {
   return (
@@ -93,9 +92,7 @@ const DetallePage = (props: PageProps<Queries.DetallePageQuery>) => {
                     }}
                     transition={{ duration: 0.3 }}
                   >
-                    <motion.div
-                      className="modal-image"
-                    >
+                    <motion.div className="modal-image">
                       <motion.img
                         className="image"
                         src={allImages[selectedId - 1]}

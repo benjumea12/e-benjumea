@@ -15,7 +15,6 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "@react-icons/all-files": "^4.1.0",
     "@types/styled-components": "^5.1.26",
     "babel-plugin-styled-components": "^2.0.7",
     "framer-motion": "^8.5.0",
@@ -25,6 +24,7 @@
     "gatsby-transformer-json": "^5.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.7.1",
     "styled-components": "^5.3.6"
   },
   "devDependencies": {
