@@ -7,6 +7,7 @@ import SVGCastle from "./SVGCastle"
 import SVGPrincess from "./SVGPrincess"
 import ButtonReturn from "./ButtonReturn"
 import ProjectCard from "./ProjectCard"
+import SEO from "./SEO"
 
 export {
   Layout,
@@ -18,4 +19,5 @@ export {
   SVGPrincess,
   ButtonReturn,
   ProjectCard,
+  SEO,
 }

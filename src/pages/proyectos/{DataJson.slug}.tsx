@@ -1,8 +1,8 @@
 import React, { useState } from "react"
-import type { HeadFC, PageProps } from "gatsby"
+import type { PageProps } from "gatsby"
 import { graphql, navigate } from "gatsby"
 // Components
-import { ButtonReturn, SVGPrincess } from "../../componets"
+import { ButtonReturn, SVGPrincess, SEO } from "../../componets"
 // Styled components
 import { Main, Image } from "../../styled/detalle.styled"
 import { Layout } from "../../componets"
@@ -295,7 +295,18 @@ const DetallePage = (props: PageProps<Queries.DetallePageQuery>) => {
 
 export default DetallePage
 
-export const Head: HeadFC = () => <title>Home Page</title>
+export const Head = (props: PageProps<Queries.DetallePageQuery>) => {
+  const projectData = props.data.allDataJson.edges[0].node
+
+  return (
+    <SEO
+      title={`${projectData.title} | E-Benjumea`}
+      pathname={`${projectData?.slug}`}
+      imageEdit={`${projectData.startImg}`}
+      description={`${projectData.description}`}
+    />
+  )
+}
 
 export const query = graphql`
   query DetallePage($slug: String) {

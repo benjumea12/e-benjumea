@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import type { HeadFC, PageProps } from "gatsby"
 import { navigate } from "gatsby"
 import { RiWhatsappFill } from "react-icons/ri"
@@ -14,6 +14,7 @@ import {
   SVGWarrior,
   SVGScene,
   ButtonReturn,
+  SEO
 } from "../componets"
 
 const IndexPage: React.FC<PageProps> = () => {
@@ -186,4 +187,4 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage
 
-export const Head: HeadFC = () => <title>Home Page</title>
+export const Head = () => <SEO title="Home | E-Benjumea" />
