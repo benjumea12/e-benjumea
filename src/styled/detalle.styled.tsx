@@ -5,7 +5,7 @@ import { media } from "../theme"
 
 export const Main = styled.div`
   position: fixed;
-  z-index: 2;
+  z-index: 1;
   width: calc(100% - 18em);
   margin-left: 8em;
   height: calc(100% - 12em);
@@ -91,7 +91,7 @@ export const Main = styled.div`
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 10;
+    z-index: 50;
     height: 100%;
     width: 100%;
     display: flex;
@@ -99,12 +99,17 @@ export const Main = styled.div`
     justify-content: center;
 
     .modal-image {
-      width: 85%;
-     height: 85%;
+      width: 75%;
+      height: 90%;
       position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
+
+      @media (max-width: ${media.lg}) {
+        width: 85%;
+        height: 85%;
+      }
 
       .image {
         max-width: 100%;
@@ -116,7 +121,7 @@ export const Main = styled.div`
         position: absolute;
         top: 0;
         right: 0;
-        
+
         cursor: pointer;
         font-size: 28px;
         color: #ffffff;
@@ -136,7 +141,8 @@ export const Main = styled.div`
         .extra-info {
           text-align: left;
         }
-        h1, h5 {
+        h1,
+        h5 {
           width: 80%;
           margin-left: 20%;
         }

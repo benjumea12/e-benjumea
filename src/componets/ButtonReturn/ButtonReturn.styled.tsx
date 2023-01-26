@@ -5,6 +5,7 @@ import { media } from "../../theme"
 
 export const Main = styled.div<{ inverted?: boolean }>`
   position: absolute;
+  z-index: 2;
   cursor: pointer;
   transform: ${(props) =>
     props.inverted ? `rotate(-90deg)` : `rotate(90deg)`};

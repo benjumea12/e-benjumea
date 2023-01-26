@@ -75,6 +75,12 @@ const DetallePage = (props: PageProps<Queries.DetallePageQuery>) => {
       <AnimatePresence>
         {showPage && (
           <React.Fragment>
+            <ButtonReturn
+              onClick={handleClick}
+              title="Volver a proyectos"
+              inverted
+              key="button-return"
+            />
             <SVGPrincess key="image-content" />
             <Main key="main-content">
               <AnimatePresence>
@@ -280,12 +286,6 @@ const DetallePage = (props: PageProps<Queries.DetallePageQuery>) => {
                 ))}
               </motion.div>
             </Main>
-            <ButtonReturn
-              onClick={handleClick}
-              title="Volver a proyectos"
-              inverted
-              key="button-return"
-            />
           </React.Fragment>
         )}
       </AnimatePresence>
