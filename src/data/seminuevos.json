@@ -1,0 +1,28 @@
+{
+  "slug": "seminuevos",
+  "order": 7,
+  "personal": false,
+  "title": "SemiNuevos",
+  "startImg": "https://i.imgur.com/Zu37S3c.png",
+  "description": "Somos Seminuevos-Autoniza su concesionario para compra o venta de vehículos usados de manera fácil y segura. Seminuevos es un sitio de administración de contenido hecho con una plantilla personalizada de WordPress creada desde cero para al proyecto, e integrado las herramientas que WordPress ofrece.",
+  "development": [
+    "HTML",
+    "CSS",
+    "JavaScrip",
+    "TypeScript",
+    "WordPress",
+    "PHP"
+  ],
+  "links": [
+    {
+      "name": "Link de sitio",
+      "link": "https://seminuevosdidacol.com/"
+    }
+  ],
+  "gallery": [
+    "https://i.imgur.com/Zu37S3c.png",
+    "https://i.imgur.com/DXwVneM.png",
+    "https://i.imgur.com/6QtDcti.png",
+    "https://i.imgur.com/7zxaWmn.png"
+  ]
+}

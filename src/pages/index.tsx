@@ -129,7 +129,7 @@ const IndexPage: React.FC<PageProps> = () => {
                 tenga muchas ganas de romperla no dudes en contactarme.
               </motion.p>
               <motion.a
-                href="https://drive.google.com/file/d/1YO69Yh8nTTfnxsX_vMSb3faPfdV_hZhy/view?usp=sharing"
+                href="https://drive.google.com/drive/folders/1eKZfFjzHSxNt-61-IRN9GsCuZO-Ib9NM?usp=sharing"
                 target="_blank"
                 initial={{
                   height: 0,
