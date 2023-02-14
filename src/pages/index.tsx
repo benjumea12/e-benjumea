@@ -14,7 +14,7 @@ import {
   SVGWarrior,
   SVGScene,
   ButtonReturn,
-  SEO
+  SEO,
 } from "../componets"
 
 const IndexPage: React.FC<PageProps> = () => {
@@ -53,7 +53,7 @@ const IndexPage: React.FC<PageProps> = () => {
                   }}
                   exit={exit}
                   transition={{
-                    delay: 4.3 - index,
+                    delay: 3 - index * 0.5,
                   }}
                 >
                   {item}
@@ -85,17 +85,14 @@ const IndexPage: React.FC<PageProps> = () => {
                 }}
                 transition={{
                   ease: "easeOut",
-                  duration: 0.3,
-                  opacity: {
-                    delay: 1.3,
-                    duration: 0.5,
-                  },
+                  duration: 1,
+                  delay: 0.5,
                 }}
               />
               <SVGWarrior />
               <SVGDragon />
             </motion.div>
-            <motion.div className="section-text" exit={exit}>
+            <motion.section className="section-text" exit={exit}>
               <motion.h2
                 initial={{
                   height: 0,
@@ -104,7 +101,7 @@ const IndexPage: React.FC<PageProps> = () => {
                   height: "auto",
                 }}
                 transition={{
-                  delay: 3,
+                  delay: 2,
                 }}
               >
                 FrontEnd Web/Movil
@@ -117,16 +114,17 @@ const IndexPage: React.FC<PageProps> = () => {
                   height: "auto",
                 }}
                 transition={{
-                  delay: 4,
+                  delay: 2.5,
                 }}
               >
                 Si lo que buscas es alguien con excelente dominio en el
-                desarrollo FrontEnd tanto Web como Movil, capacidad de maquetado de interfaces de
-                usuario con estilos y animaciones específicas, habilidades para
-                el diseño UI y UX y conocimientos sobre el desarrollo BackEnd y
-                bases de datos. Con muchos deseos de mejorar mi experiencia y
-                conocimientos, que sea un absoluto apasionado por su trabajo y
-                tenga muchas ganas de romperla no dudes en contactarme.
+                desarrollo FrontEnd tanto Web como Movil, capacidad de maquetado
+                de interfaces de usuario con estilos y animaciones específicas,
+                habilidades para el diseño UI y UX y conocimientos sobre el
+                desarrollo BackEnd y bases de datos. Con muchos deseos de
+                mejorar mi experiencia y conocimientos, que sea un absoluto
+                apasionado por su trabajo y tenga muchas ganas de romperla no
+                dudes en contactarme.
               </motion.p>
               <motion.a
                 href="https://drive.google.com/drive/folders/1eKZfFjzHSxNt-61-IRN9GsCuZO-Ib9NM?usp=sharing"
@@ -138,12 +136,12 @@ const IndexPage: React.FC<PageProps> = () => {
                   height: "auto",
                 }}
                 transition={{
-                  delay: 5,
+                  delay: 3,
                 }}
               >
                 Descargar mi CV
               </motion.a>
-              <motion.div
+              <motion.footer
                 className="redes"
                 initial={{
                   height: 0,
@@ -152,29 +150,39 @@ const IndexPage: React.FC<PageProps> = () => {
                   height: "auto",
                 }}
                 transition={{
-                  delay: 6,
+                  delay: 3.5,
                 }}
               >
                 <a
                   href="https://api.whatsapp.com/send?phone=573108246838"
                   target="_blank"
+                  aria-label="Ir mi WhatsApp"
                 >
                   <RiWhatsappFill className="icon-item" />
                 </a>
-                <a href="mailto:benjumeac12@gmail.com" target="_blank">
+                <a
+                  href="mailto:benjumeac12@gmail.com"
+                  target="_blank"
+                  aria-label="Ir a mi email"
+                >
                   <MdEmail className="icon-item" />
                 </a>
                 <a
                   href="https://www.linkedin.com/in/benjumea-c22?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B3fJtS5ZARvavWMrNZXdzYw%3D%3D"
                   target="_blank"
+                  aria-label="Ir a mi LinkedIn"
                 >
                   <AiFillLinkedin className="icon-item" />
                 </a>
-                <a href="https://github.com/benjumea12" target="_blank">
+                <a
+                  href="https://github.com/benjumea12"
+                  target="_blank"
+                  aria-label="Ir a mi github"
+                >
                   <AiOutlineGithub className="icon-item" />
                 </a>
-              </motion.div>
-            </motion.div>
+              </motion.footer>
+            </motion.section>
             <motion.div exit={exit}>
               <ButtonReturn onClick={handleClick} title="Proyectos faforitos" />
             </motion.div>

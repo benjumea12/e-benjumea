@@ -30,11 +30,11 @@ const ButtonReturn = (props: {
           translateX: "-0",
         }}
         transition={{
-          delay: 7,
+          delay: 4,
         }}
         exit={exit}
       >
-        <h4>{props.title}</h4>
+        <h5>{props.title}</h5>
         <SVGArrow />
       </motion.div>
     </Main>

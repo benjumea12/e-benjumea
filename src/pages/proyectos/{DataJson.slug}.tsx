@@ -115,7 +115,7 @@ const DetallePage = (props: PageProps<Queries.DetallePageQuery>) => {
                   </motion.div>
                 )}
               </AnimatePresence>
-              <div className="content-top">
+              <section className="content-top">
                 <div className="text">
                   {projectData.personal ? (
                     <motion.h5
@@ -181,7 +181,7 @@ const DetallePage = (props: PageProps<Queries.DetallePageQuery>) => {
                     {projectData.description}
                   </motion.p>
 
-                  <motion.div
+                  <motion.section
                     className="extra-info"
                     initial={{
                       height: 0,
@@ -226,7 +226,7 @@ const DetallePage = (props: PageProps<Queries.DetallePageQuery>) => {
                         ))}
                       </ul>
                     </div>
-                  </motion.div>
+                  </motion.section>
                 </div>
                 <motion.div
                   className="image image-item"
@@ -247,7 +247,7 @@ const DetallePage = (props: PageProps<Queries.DetallePageQuery>) => {
                     onClick={() => setSelectedId(1)}
                   />
                 </motion.div>
-              </div>
+              </section>
 
               <motion.h3
                 className="gallery-title"
@@ -265,7 +265,7 @@ const DetallePage = (props: PageProps<Queries.DetallePageQuery>) => {
                 Galeria
               </motion.h3>
 
-              <motion.div
+              <motion.section
                 className="gallery"
                 variants={container}
                 initial="hidden"
@@ -284,7 +284,7 @@ const DetallePage = (props: PageProps<Queries.DetallePageQuery>) => {
                     />
                   </motion.div>
                 ))}
-              </motion.div>
+              </motion.section>
             </Main>
           </React.Fragment>
         )}

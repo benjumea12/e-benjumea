@@ -5,8 +5,7 @@ import { motion } from "framer-motion"
 import { Main } from "./SVGDragon.styled"
 
 const SVGDragon = () => {
-  const svg = {
-  }
+  const svg = {}
   const icon = {
     hidden: {
       pathLength: 0,
@@ -22,7 +21,7 @@ const SVGDragon = () => {
     <Main>
       <motion.div
         initial={{
-          scale: .8,
+          scale: 0.8,
           opacity: 0,
           translateX: "-5vw",
           translateY: "-5vh",
@@ -34,8 +33,8 @@ const SVGDragon = () => {
           translateY: "0",
         }}
         transition={{
-          delay: 2,
-          duration: .6
+          delay: 1.3,
+          duration: 0.6,
         }}
       >
         <motion.svg
@@ -104,4 +103,4 @@ const SVGDragon = () => {
   )
 }
 
-export default SVGDragon 
+export default SVGDragon
