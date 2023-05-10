@@ -1,11 +1,11 @@
 import React, { useState } from "react"
-import type { PageProps } from "gatsby"
+import type { HeadFC, PageProps } from "gatsby"
 import { graphql, navigate } from "gatsby"
 // Components
 import { ButtonReturn, ProjectCard } from "../../componets"
 // Styled components
 import { Main } from "../../styled/proyectos.styled"
-import { Layout, SVGCastle, SEO } from "../../componets"
+import { Layout, SVGCastle } from "../../componets"
 // Frame motion
 import { motion, AnimatePresence } from "framer-motion"
 
@@ -118,7 +118,7 @@ const ProyectosPage = (props: PageProps<Queries.ProyectosPageQuery>) => {
 
 export default ProyectosPage
 
-export const Head = () => <SEO title="Proyectos | E-Benjumea" />
+export const Head: HeadFC = () => <title>Home Page</title>
 
 export const query = graphql`
   query ProyectosPage {

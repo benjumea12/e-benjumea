@@ -1,15 +1,15 @@
 import React, { useState } from "react"
-import type { PageProps } from "gatsby"
+import type { HeadFC, PageProps } from "gatsby"
 import { graphql, navigate } from "gatsby"
 // Components
-import { ButtonReturn, SVGPrincess, SEO } from "../../componets"
+import { ButtonReturn, SVGPrincess } from "../../componets"
 // Styled components
 import { Main, Image } from "../../styled/detalle.styled"
 import { Layout } from "../../componets"
 // Frame motion
 import { motion, AnimatePresence } from "framer-motion"
 // Images
-import { GrClose } from "react-icons/gr"
+import { GrFormClose } from "react-icons/gr"
 
 const ImagenDetalle = (props: { src: any; index: number; onClick: any }) => {
   return (
@@ -109,13 +109,13 @@ const DetallePage = (props: PageProps<Queries.DetallePageQuery>) => {
                         layoutId={`item-close-${selectedId}`}
                         onClick={() => setSelectedId(null)}
                       >
-                        <GrClose />
+                        <GrFormClose color="#FFFFFF" />
                       </motion.div>
                     </motion.div>
                   </motion.div>
                 )}
               </AnimatePresence>
-              <section className="content-top">
+              <div className="content-top">
                 <div className="text">
                   {projectData.personal ? (
                     <motion.h5
@@ -181,7 +181,7 @@ const DetallePage = (props: PageProps<Queries.DetallePageQuery>) => {
                     {projectData.description}
                   </motion.p>
 
-                  <motion.section
+                  <motion.div
                     className="extra-info"
                     initial={{
                       height: 0,
@@ -226,7 +226,7 @@ const DetallePage = (props: PageProps<Queries.DetallePageQuery>) => {
                         ))}
                       </ul>
                     </div>
-                  </motion.section>
+                  </motion.div>
                 </div>
                 <motion.div
                   className="image image-item"
@@ -247,7 +247,7 @@ const DetallePage = (props: PageProps<Queries.DetallePageQuery>) => {
                     onClick={() => setSelectedId(1)}
                   />
                 </motion.div>
-              </section>
+              </div>
 
               <motion.h3
                 className="gallery-title"
@@ -265,7 +265,7 @@ const DetallePage = (props: PageProps<Queries.DetallePageQuery>) => {
                 Galeria
               </motion.h3>
 
-              <motion.section
+              <motion.div
                 className="gallery"
                 variants={container}
                 initial="hidden"
@@ -284,7 +284,7 @@ const DetallePage = (props: PageProps<Queries.DetallePageQuery>) => {
                     />
                   </motion.div>
                 ))}
-              </motion.section>
+              </motion.div>
             </Main>
           </React.Fragment>
         )}
@@ -295,18 +295,7 @@ const DetallePage = (props: PageProps<Queries.DetallePageQuery>) => {
 
 export default DetallePage
 
-export const Head = (props: PageProps<Queries.DetallePageQuery>) => {
-  const projectData = props.data.allDataJson.edges[0].node
-
-  return (
-    <SEO
-      title={`${projectData.title} | E-Benjumea`}
-      pathname={`${projectData?.slug}`}
-      imageEdit={`${projectData.startImg}`}
-      description={`${projectData.description}`}
-    />
-  )
-}
+export const Head: HeadFC = () => <title>Home Page</title>
 
 export const query = graphql`
   query DetallePage($slug: String) {

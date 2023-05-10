@@ -4,12 +4,12 @@ import styled from "styled-components"
 import { media } from "../../theme"
 
 export const Main = styled.div`
-  width: 220px;
+  width: 14rem;
   .svg-arrow {
     width: 100%;
   }
 
   @media (max-width: ${media.lg}) {
-    width: 115px;
+    width: 8rem;
   }
 `

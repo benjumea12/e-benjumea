@@ -27,13 +27,13 @@ const Layout = (props: LayoutProps) => {
                   width: "100%",
                 }
               : {
-                  height: "calc(100% - 5em)",
-                  width: "calc(100% - 5em)",
+                  height: "calc(100% - 3em)",
+                  width: "calc(100% - 3em)",
                 }
           }
           animate={{
-            height: "calc(100% - 5em)",
-            width: "calc(100% - 5em)",
+            height: "calc(100% - 3em)",
+            width: "calc(100% - 3em)",
           }}
           transition={{
             delay: 1,

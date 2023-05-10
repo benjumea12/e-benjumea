@@ -17,6 +17,7 @@ export const Main = styled.div`
 
   &::-webkit-scrollbar {
     width: 0px;
+    display: none;
   }
 
   .content-top {
@@ -29,7 +30,7 @@ export const Main = styled.div`
     .text {
       width: 40%;
       h5 {
-        font-size: 18px;
+        font-size: 1.2rem;
         overflow: hidden;
         a {
           color: ${(props) => props.theme.colors.dark};
@@ -37,13 +38,14 @@ export const Main = styled.div`
       }
 
       h1 {
-        font-size: 38px;
-        margin: 18px 0;
+        font-size: 2.8rem;
+        margin: 1rem 0;
         overflow: hidden;
       }
 
       p {
         overflow: hidden;
+        font-size: 1rem;
       }
 
       .extra-info {
@@ -52,13 +54,15 @@ export const Main = styled.div`
         margin-top: 2em;
         overflow: hidden;
         h4 {
-          font-size: 22px;
-          margin-bottom: 10px;
+          font-size: 1.5rem;
+          margin-bottom: 1rem;
         }
         a,
         h6 {
-          font-weight: 600;
-          font-size: 16px;
+          font-weight: 500;
+          font-size: 1.2rem;
+          margin-bottom: 0.1rem;
+          font-family: "Lato", sans-serif;
           color: ${(props) => props.theme.colors.dark};
         }
       }
@@ -72,7 +76,7 @@ export const Main = styled.div`
   }
 
   .gallery-title {
-    font-size: 30px;
+    font-size: 3rem;
     margin: 2em 0 1em 0;
   }
 
@@ -123,16 +127,16 @@ export const Main = styled.div`
         right: 0;
 
         cursor: pointer;
-        font-size: 28px;
+        font-size: 2rem;
         color: #ffffff;
       }
     }
   }
 
   @media (max-width: ${media.lg}) {
-    width: calc(100% - 6em);
-    margin-left: 0em;
-    padding: 6em 3em 6em 4em;
+    width: calc(100% - 4em);
+    margin-left: 1em;
+    //padding: 6em 3em 6em 4em;
     .content-top {
       flex-direction: column;
       .text {
@@ -140,11 +144,29 @@ export const Main = styled.div`
         text-align: right;
         .extra-info {
           text-align: left;
+          h4 {
+            margin-bottom: 1rem;
+          }
+          a,
+          h6 {
+            font-size: 0.9rem;
+          }
         }
         h1,
         h5 {
           width: 80%;
           margin-left: 20%;
+        }
+
+        h1 {
+          font-size: 2rem;
+        }
+        h5 {
+          font-size: 0.9rem;
+        }
+
+        p {
+          font-size: 0.9rem;
         }
       }
       .image {
@@ -154,7 +176,7 @@ export const Main = styled.div`
     }
 
     .gallery-title {
-      font-size: 30px;
+      font-size: 2rem;
       margin: 1em 0 1em 0;
     }
 

@@ -3,7 +3,7 @@ import styled from "styled-components"
 // Theme
 import { media } from "../../theme"
 
-export const Main = styled.section`
+export const Main = styled.div`
   width: 100%;
   margin-bottom: 5em;
   position: relative;
@@ -57,7 +57,7 @@ export const Main = styled.section`
     padding: 0 10%;
 
     h2 {
-      font-size: 35px;
+      font-size: 1.8rem;
       margin-bottom: 20px;
       text-decoration: underline;
       text-align: center;
@@ -79,7 +79,7 @@ export const Main = styled.section`
 
     .card-content {
       h2 {
-        font-size: 22px;
+        font-size: 2.2rem;
         margin-bottom: 10px;
       }
     }

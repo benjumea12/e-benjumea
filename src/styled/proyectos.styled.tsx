@@ -12,10 +12,9 @@ export const Main = styled.div`
   height: 85%;
   .section-title {
     position: absolute;
-    z-index: 2;
     top: 0;
     right: 5em;
-    font-size: 25px;
+    font-size: 1.8rem;
     text-align: right;
     h1 {
       overflow: hidden;
@@ -51,7 +50,7 @@ export const Main = styled.div`
     height: 90%;
     .section-title {
       right: 20px;
-      font-size: 16px;
+      font-size: 1rem;
       h1 {
         overflow: hidden;
       }
@@ -60,13 +59,13 @@ export const Main = styled.div`
     .section-projects {
       width: calc(100% - 8em);
       height: calc(100% - 13em - 5em);
-      padding: 13em 4em 5em 4em !important;
+      padding: 12em 4em 5em 4em !important;
       .item {
         width: 90%;
         list-style: none;
         &:nth-child(2n) {
-        transform: translateY(0%) !important;
-      }
+          transform: translateY(0%) !important;
+        }
       }
     }
   }

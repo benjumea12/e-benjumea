@@ -13,8 +13,8 @@ export const Main = styled.div<{ inverted?: boolean }>`
 
   left: 10px;
 
-  h5 {
-    font-size: 25px;
+  h4 {
+    font-size: 1.5rem;
     margin-bottom: 10px;
   }
 
@@ -23,11 +23,11 @@ export const Main = styled.div<{ inverted?: boolean }>`
       props.inverted ? `rotate(-90deg)` : `rotate(90deg)`};
     ${(props) =>
       props.inverted
-        ? `top: 100px; left: 20px;`
-        : `bottom: 90px; left: auto; right: 10px;`}
+        ? `top: 80px; left: -8px;`
+        : `bottom: 80px; left: auto; right: -13px;`}
 
-    h5 {
-      font-size: 14px !important;
+    h4 {
+      font-size: 0.9rem !important;
       margin-bottom: 3px;
     }
   }

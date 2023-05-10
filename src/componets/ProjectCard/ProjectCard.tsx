@@ -13,10 +13,10 @@ const ProjectCard = (props: { project: any }) => {
   return (
     <Main>
       <img src={project.startImg} alt={project.title} />
-      <header className="card-content">
+      <div className="card-content">
         <h2>{project.title}</h2>
         <SVGArrow />
-      </header>
+      </div>
       <motion.div className="border border-1"></motion.div>
       <motion.div className="border border-2"></motion.div>
       <motion.div className="border border-3"></motion.div>

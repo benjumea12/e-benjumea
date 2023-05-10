@@ -27,14 +27,16 @@ const SVGDragon = () => {
   return (
     <Main>
       <motion.div
-        style={{
-          overflow: "hidden",
+      style={{
+        overflow: "hidden"
+      }}
+        initial={{
         }}
-        initial={{}}
-        animate={{}}
+        animate={{
+        }}
         transition={{
-          delay: 1,
-          duration: 1,
+          delay: 2,
+          duration: 2
         }}
       >
         <motion.svg

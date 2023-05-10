@@ -23,23 +23,24 @@ export const Main = styled.div`
 
   .section-title {
     text-align: right;
-    font-size: 30px;
+    font-size: 1.6rem;
   }
 
   .section-text {
     justify-content: flex-end;
     h2 {
-      margin-bottom: 10px;
-      font-size: 25px;
+      margin-bottom: 0.8rem;
+      font-size: 1.6rem;
       overflow: hidden;
     }
     p {
       overflow: hidden;
+      font-size: 1rem;
     }
     a {
       color: ${(props) => props.theme.colors.dark};
-      margin: 20px 0 10px 0;
-      font-size: 20px;
+      margin: 0.8rem 0;
+      font-size: 1.4rem;
       overflow: hidden;
     }
     .redes {
@@ -47,9 +48,9 @@ export const Main = styled.div`
       align-items: center;
       overflow: hidden;
       a {
-        margin-right: 10px;
+        margin-right: 1rem;
         .icon-item {
-          font-size: 42px;
+          font-size: 2.5rem;
         }
       }
     }
@@ -75,10 +76,11 @@ export const Main = styled.div`
     }
   }
 
-  @media (max-width: ${media.lg}) {
+  @media (max-width: ${media.md}) {
     flex-direction: column;
     align-items: center;
-    height: 90%;
+    height: 97%;
+    margin-top: 3%;
     .section-title,
     .section-text {
       width: 100%;
@@ -87,7 +89,7 @@ export const Main = styled.div`
 
     .section-title {
       h1 {
-        font-size: 35px;
+        font-size: 2rem;
       }
     }
 
@@ -98,21 +100,20 @@ export const Main = styled.div`
 
     .section-text {
       h2 {
-        margin-bottom: 8px;
-        font-size: 18px;
+        font-size: 1.2rem;
       }
       p {
         overflow: hidden;
-        font-size: 13px;
+        font-size: 0.8rem;
       }
       a {
-        margin: 15px 0 8px 0;
-        font-size: 16px;
+        margin: 0.8rem 0;
+        font-size: 1rem;
       }
       .redes {
         a {
           .icon-item {
-            font-size: 32px;
+            font-size: 2rem;
           }
         }
       }
