@@ -4,67 +4,65 @@ import styled from "styled-components"
 import { media } from "../theme"
 
 export const Main = styled.div`
+  width: 100%;
+  height: calc(100vh - 8em);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 90%;
-  height: 85%;
 
   .section-title,
   .section-text {
-    width: 30%;
+    width: 33%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    .name {
-      overflow: hidden;
-    }
   }
 
   .section-title {
     text-align: right;
-    font-size: 1.6rem;
+    h1 {
+      font-size: clamp(2.1rem, 3.8vw, 4rem);
+    }
   }
 
   .section-text {
     justify-content: flex-end;
+    padding-right: 2%;
     h2 {
-      margin-bottom: 0.8rem;
-      font-size: 1.6rem;
-      overflow: hidden;
+      margin-bottom: 0.6rem;
+      font-size: clamp(1.4rem, 2vw, 4.2rem);
     }
     p {
-      overflow: hidden;
       font-size: 1rem;
+      font-size: clamp(0.8rem, 1.15vw, 1.5rem);
+      margin-bottom: 0.5rem;
     }
+
     a {
       color: ${(props) => props.theme.colors.dark};
-      margin: 0.8rem 0;
-      font-size: 1.4rem;
-      overflow: hidden;
+      margin: 0.8rem 0 0 0;
+      font-size: clamp(1.1rem, 1.7vw, 4rem);
     }
     .redes {
       display: flex;
       align-items: center;
-      overflow: hidden;
       a {
-        margin-right: 1rem;
+        margin-right: 0.8rem;
         .icon-item {
-          font-size: 2.5rem;
+          font-size: clamp(2rem, 2.8vw, 3rem);
         }
       }
     }
   }
 
   .section-grafic {
-    width: 30%;
+    width: 25%;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
-    opacity: 0;
     .frame {
       border: 2px solid ${(props) => props.theme.colors.dark};
       height: 80%;
@@ -79,42 +77,24 @@ export const Main = styled.div`
   @media (max-width: ${media.md}) {
     flex-direction: column;
     align-items: center;
-    height: 97%;
-    margin-top: 3%;
+    justify-content: space-between;
+    height: calc(100vh - 6em);
+
     .section-title,
     .section-text {
       width: 100%;
       height: auto;
+      padding-right: 0%;
     }
-
-    .section-title {
-      h1 {
-        font-size: 2rem;
-      }
-    }
-
     .section-grafic {
       height: 40vh;
-      width: 80%;
+      width: 70%;
     }
 
     .section-text {
-      h2 {
-        font-size: 1.2rem;
-      }
       p {
-        overflow: hidden;
-        font-size: 0.8rem;
-      }
-      a {
-        margin: 0.8rem 0;
-        font-size: 1rem;
-      }
-      .redes {
-        a {
-          .icon-item {
-            font-size: 2rem;
-          }
+        &:nth-child(3) {
+          width: 85%;
         }
       }
     }

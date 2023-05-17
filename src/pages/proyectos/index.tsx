@@ -1,11 +1,13 @@
-import React, { useState } from "react"
+import React, { Fragment, useState } from "react"
 import type { HeadFC, PageProps } from "gatsby"
 import { graphql, navigate } from "gatsby"
 // Components
-import { ButtonReturn, ProjectCard } from "../../componets"
+import { ProjectCard } from "../../componets"
 // Styled components
 import { Main } from "../../styled/proyectos.styled"
 import { Layout, SVGCastle } from "../../componets"
+// Theme
+import { opacityMotion, containerMotion, itemLiMotion } from "../../theme"
 // Frame motion
 import { motion, AnimatePresence } from "framer-motion"
 
@@ -17,28 +19,6 @@ const ProyectosPage = (props: PageProps<Queries.ProyectosPageQuery>) => {
     (a: any, b: any) => a.node.order - b.node.order
   )
 
-  const container = {
-    hidden: {
-      opacity: 1,
-    },
-    visible: {
-      opacity: 1,
-      transition: {
-        delay: 0,
-        delayChildren: 3,
-        staggerChildren: 0.2,
-      },
-    },
-  }
-
-  const itemLi = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-    },
-  }
-
   const handleClick = (path: any) => {
     setShowPage(false)
     setTimeout(() => {
@@ -46,55 +26,28 @@ const ProyectosPage = (props: PageProps<Queries.ProyectosPageQuery>) => {
     }, 600)
   }
 
-  const exit = {
-    opacity: 0,
-    transition: {
-      delay: 0,
-      duration: 0.3,
-    },
-  }
-
   return (
-    <Layout animate={false}>
+    <Layout>
       <AnimatePresence>
         {showPage && (
-          <React.Fragment>
-            <Main key="content">
-              <SVGCastle />
-
-              <div className="section-title">
-                {["PROYECTOS", "FAVORITOS"].map((item, index) => (
-                  <motion.h1
-                    key={index}
-                    className="name"
-                    initial={{
-                      height: 0,
-                    }}
-                    animate={{
-                      height: "auto",
-                    }}
-                    exit={exit}
-                    transition={{
-                      delay: 2 - index * 0.5,
-                    }}
-                  >
-                    {item}
-                  </motion.h1>
-                ))}
-              </div>
+          <Fragment>
+            <SVGCastle />
+            <Main>
+              <motion.h1 className="title" {...opacityMotion}>
+                PROYECTOS <br /> FAVORITOS
+              </motion.h1>
 
               <motion.ul
                 className="section-projects"
-                variants={container}
                 initial="hidden"
                 animate="visible"
+                {...containerMotion}
               >
                 {projectsData.map((item: any, index: any) => (
                   <motion.li
                     key={item.node.slug}
                     className="item"
-                    variants={itemLi}
-                    exit={exit}
+                    {...itemLiMotion}
                     onClick={() => handleClick(item.node.slug)}
                   >
                     <ProjectCard project={item.node} />
@@ -102,14 +55,7 @@ const ProyectosPage = (props: PageProps<Queries.ProyectosPageQuery>) => {
                 ))}
               </motion.ul>
             </Main>
-            <motion.div key="button-return" exit={exit}>
-              <ButtonReturn
-                onClick={() => handleClick("/")}
-                title="Volver a Inicio"
-                inverted
-              />
-            </motion.div>
-          </React.Fragment>
+          </Fragment>
         )}
       </AnimatePresence>
     </Layout>

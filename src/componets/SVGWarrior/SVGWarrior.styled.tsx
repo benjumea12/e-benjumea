@@ -3,11 +3,11 @@ import styled from "styled-components"
 
 export const Main = styled.div`
   position: absolute;
-  bottom: 0%;
+  bottom: 3%;
   right: -8%;
   width: 70%;
 
   .svg-warrior {
-    width: 100%;
+    width: 95%;
   }
 `

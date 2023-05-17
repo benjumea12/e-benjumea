@@ -57,8 +57,8 @@ export const Main = styled.div`
     padding: 0 10%;
 
     h2 {
-      font-size: 1.8rem;
-      margin-bottom: 20px;
+      font-size: clamp(1.3rem, 2vw, 2.5rem);
+      margin-bottom: 1rem;
       text-decoration: underline;
       text-align: center;
     }
@@ -76,12 +76,5 @@ export const Main = styled.div`
 
   @media (max-width: ${media.lg}) {
     margin-bottom: 3em;
-
-    .card-content {
-      h2 {
-        font-size: 2.2rem;
-        margin-bottom: 10px;
-      }
-    }
   }
 `

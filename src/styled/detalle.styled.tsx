@@ -2,95 +2,97 @@
 import styled from "styled-components"
 // Theme
 import { media } from "../theme"
+import { MotionProps } from "framer-motion"
 
 export const Main = styled.div`
-  position: fixed;
-  z-index: 1;
-  width: calc(100% - 18em);
-  margin-left: 8em;
-  height: calc(100% - 12em);
-  overflow-y: scroll;
-  overflow-x: hidden;
-  padding: 6em 0;
-  display: flex;
-  flex-direction: column;
-
-  &::-webkit-scrollbar {
-    width: 0px;
-    display: none;
-  }
-
-  .content-top {
+  width: 80%;
+  margin-right: 5%;
+  padding-top: 2em;
+  @media (max-width: ${media.md}) {
     width: 90%;
+    margin-right: 5%;
+  }
+  .content-top {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative;
-    z-index: 2;
-    .text {
-      width: 40%;
+
+    @media (max-width: ${media.md}) {
+      flex-direction: column-reverse;
+    }
+
+    .info-section {
+      width: 45%;
       h5 {
-        font-size: 1.2rem;
-        overflow: hidden;
+        font-size: clamp(0.8rem, 1.3vw, 1.5rem);
+        margin-bottom: 0.5rem;
         a {
           color: ${(props) => props.theme.colors.dark};
         }
       }
-
       h1 {
-        font-size: 2.8rem;
-        margin: 1rem 0;
-        overflow: hidden;
+        font-size: clamp(1.5rem, 3vw, 3rem);
+        margin-bottom: 0.5rem;
       }
-
       p {
-        overflow: hidden;
-        font-size: 1rem;
+        font-size: clamp(0.85rem, 1.1vw, 1.2rem);
       }
-
-      .extra-info {
+      .caracteristics {
         display: flex;
-        justify-content: space-between;
-        margin-top: 2em;
-        overflow: hidden;
+        margin: 2em 0;
+        .technologies,
+        .links {
+          width: 45%;
+        }
         h4 {
-          font-size: 1.5rem;
-          margin-bottom: 1rem;
+          margin-bottom: 0.8rem;
+          font-size: clamp(0.8rem, 1.8vw, 3rem);
         }
-        a,
-        h6 {
-          font-weight: 500;
-          font-size: 1.2rem;
-          margin-bottom: 0.1rem;
-          font-family: "Lato", sans-serif;
-          color: ${(props) => props.theme.colors.dark};
+        ul {
+          padding-left: 1rem;
+          li,
+          a,
+          h6 {
+            font-weight: 500;
+            font-size: clamp(0.8rem, 1vw, 3rem);
+            font-family: "Lato", sans-serif;
+            color: ${(props) => props.theme.colors.dark};
+          }
         }
+      }
+      @media (max-width: ${media.md}) {
+        width: 100%;
+        margin-top: 1em;
       }
     }
     .image {
       width: 50%;
-      img {
+      @media (max-width: ${media.md}) {
         width: 100%;
       }
     }
   }
 
-  .gallery-title {
-    font-size: 3rem;
-    margin: 2em 0 1em 0;
+  h3 {
+    font-size: clamp(1.3rem, 2vw, 2.5rem);
+    margin-top: 2rem;
   }
 
   .gallery {
-    width: 95%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    gap: 4%;
+    margin-top: 1em;
     .image-item {
-      width: 22%;
-      margin-right: 3%;
+      width: 29%;
+      @media (max-width: ${media.md}) {
+        width: 100%;
+      }
     }
   }
+`
 
+export const Modal = styled.div`
   .modal-overlay {
     position: fixed;
     top: 0;
@@ -103,8 +105,6 @@ export const Main = styled.div`
     justify-content: center;
 
     .modal-image {
-      width: 75%;
-      height: 90%;
       position: relative;
       display: flex;
       align-items: center;
@@ -116,78 +116,19 @@ export const Main = styled.div`
       }
 
       .image {
-        max-width: 100%;
-        max-height: 100%;
+        max-width: 80vw;
+        max-height: 80vh;
         border: 2px solid ${(props) => props.theme.colors.dark};
       }
 
       .close {
         position: absolute;
-        top: 0;
-        right: 0;
+        top: -2.5rem;
+        right: -2.5rem;
 
         cursor: pointer;
-        font-size: 2rem;
+        font-size: 3rem;
         color: #ffffff;
-      }
-    }
-  }
-
-  @media (max-width: ${media.lg}) {
-    width: calc(100% - 4em);
-    margin-left: 1em;
-    //padding: 6em 3em 6em 4em;
-    .content-top {
-      flex-direction: column;
-      .text {
-        width: 100%;
-        text-align: right;
-        .extra-info {
-          text-align: left;
-          h4 {
-            margin-bottom: 1rem;
-          }
-          a,
-          h6 {
-            font-size: 0.9rem;
-          }
-        }
-        h1,
-        h5 {
-          width: 80%;
-          margin-left: 20%;
-        }
-
-        h1 {
-          font-size: 2rem;
-        }
-        h5 {
-          font-size: 0.9rem;
-        }
-
-        p {
-          font-size: 0.9rem;
-        }
-      }
-      .image {
-        width: 90%;
-        margin-top: 2em;
-      }
-    }
-
-    .gallery-title {
-      font-size: 2rem;
-      margin: 1em 0 1em 0;
-    }
-
-    .gallery {
-      width: 95%;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      .image-item {
-        width: 45%;
-        margin-right: 5%;
       }
     }
   }
@@ -240,3 +181,42 @@ export const Image = styled.div`
     margin-bottom: 2em;
   }
 `
+
+export const modalOverlayMotion: MotionProps = {
+  initial: {
+    backgroundColor: "rgba(0, 0, 0, 0)",
+  },
+  animate: {
+    backgroundColor: "rgba(0, 0, 0, .5)",
+  },
+  exit: {
+    backgroundColor: "rgba(0, 0, 0, 0)",
+  },
+  transition: { duration: 0.3 },
+}
+
+export const containerMotion: MotionProps = {
+  variants: {
+    hidden: {
+      opacity: 1,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        delay: 0,
+        delayChildren: 3,
+        staggerChildren: 0.2,
+      },
+    },
+  },
+}
+
+export const itemLiMotion: MotionProps = {
+  variants: {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  },
+}

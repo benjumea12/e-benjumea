@@ -1,15 +1,21 @@
 import React, { useState } from "react"
 import type { HeadFC, PageProps } from "gatsby"
-import { graphql, navigate } from "gatsby"
+import { graphql } from "gatsby"
 // Components
-import { ButtonReturn, SVGPrincess } from "../../componets"
+import { SVGPrincess } from "../../componets"
 // Styled components
-import { Main, Image } from "../../styled/detalle.styled"
+import {
+  Main,
+  Image,
+  Modal,
+  modalOverlayMotion,
+} from "../../styled/detalle.styled"
 import { Layout } from "../../componets"
 // Frame motion
 import { motion, AnimatePresence } from "framer-motion"
+import { opacityMotion, containerMotion, itemLiMotion } from "../../theme"
 // Images
-import { GrFormClose } from "react-icons/gr"
+import { IoIosClose } from "react-icons/Io"
 
 const ImagenDetalle = (props: { src: any; index: number; onClick: any }) => {
   return (
@@ -33,168 +39,55 @@ const DetallePage = (props: PageProps<Queries.DetallePageQuery>) => {
   const projectData = props.data.allDataJson.edges[0].node
   const allImages: any = [projectData.startImg, projectData.gallery].flat()
 
-  const exit = {
-    opacity: 0,
-    transition: {
-      delay: 0,
-      duration: 0.3,
-    },
-  }
-
-  const container = {
-    hidden: {
-      opacity: 1,
-    },
-    visible: {
-      opacity: 1,
-      transition: {
-        delay: 0,
-        delayChildren: 3,
-        staggerChildren: 0.2,
-      },
-    },
-  }
-
-  const itemLi = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-    },
-  }
-
-  const handleClick = () => {
-    setShowPage(false)
-    setTimeout(() => {
-      navigate("/proyectos")
-    }, 600)
-  }
-
   return (
-    <Layout animate={false}>
+    <Layout>
       <AnimatePresence>
+        <SVGPrincess key="image-content" />
+
+        <Modal>
+          <AnimatePresence>
+            {selectedId && (
+              <motion.div className="modal-overlay" {...modalOverlayMotion}>
+                <motion.div className="modal-image">
+                  <motion.img
+                    className="image"
+                    src={allImages[selectedId - 1]}
+                    layoutId={`item-image-${selectedId}`}
+                  />
+                  <motion.div
+                    className="close"
+                    layoutId={`item-close-${selectedId}`}
+                    onClick={() => setSelectedId(null)}
+                  >
+                    <IoIosClose color="#FFFFFF" />
+                  </motion.div>
+                </motion.div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </Modal>
+
         {showPage && (
           <React.Fragment>
-            <ButtonReturn
-              onClick={handleClick}
-              title="Volver a proyectos"
-              inverted
-              key="button-return"
-            />
-            <SVGPrincess key="image-content" />
             <Main key="main-content">
-              <AnimatePresence>
-                {selectedId && (
-                  <motion.div
-                    className="modal-overlay"
-                    initial={{
-                      backgroundColor: "rgba(0, 0, 0, 0)",
-                    }}
-                    animate={{
-                      backgroundColor: "rgba(0, 0, 0, .5)",
-                    }}
-                    exit={{
-                      backgroundColor: "rgba(0, 0, 0, 0)",
-                    }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <motion.div className="modal-image">
-                      <motion.img
-                        className="image"
-                        src={allImages[selectedId - 1]}
-                        layoutId={`item-image-${selectedId}`}
-                      />
-                      <motion.div
-                        className="close"
-                        layoutId={`item-close-${selectedId}`}
-                        onClick={() => setSelectedId(null)}
-                      >
-                        <GrFormClose color="#FFFFFF" />
-                      </motion.div>
-                    </motion.div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-              <div className="content-top">
-                <div className="text">
+              <motion.div className="content-top" {...opacityMotion}>
+                <div className="info-section">
                   {projectData.personal ? (
-                    <motion.h5
-                      initial={{
-                        height: 0,
-                      }}
-                      animate={{
-                        height: "auto",
-                      }}
-                      exit={exit}
-                      transition={{
-                        delay: 5 * 0.5,
-                      }}
-                    >
-                      Proyecto personal
-                    </motion.h5>
+                    <h5>Proyecto personal</h5>
                   ) : (
-                    <motion.h5
-                      initial={{
-                        height: 0,
-                      }}
-                      animate={{
-                        height: "auto",
-                      }}
-                      exit={exit}
-                      transition={{
-                        delay: 5 * 0.5,
-                      }}
-                    >
+                    <h5>
                       Proyecto de{" "}
                       <a href="https://solucionsoft.com/" target="_blank">
                         @SOLUCIONSOFT
                       </a>
-                    </motion.h5>
+                    </h5>
                   )}
 
-                  <motion.h1
-                    initial={{
-                      height: 0,
-                    }}
-                    animate={{
-                      height: "auto",
-                    }}
-                    exit={exit}
-                    transition={{
-                      delay: 4 * 0.5,
-                    }}
-                  >
-                    {projectData.title}
-                  </motion.h1>
-                  <motion.p
-                    initial={{
-                      height: 0,
-                    }}
-                    animate={{
-                      height: "auto",
-                    }}
-                    exit={exit}
-                    transition={{
-                      delay: 3 * 0.5,
-                    }}
-                  >
-                    {projectData.description}
-                  </motion.p>
+                  <h1>{projectData.title}</h1>
+                  <p>{projectData.description}</p>
 
-                  <motion.div
-                    className="extra-info"
-                    initial={{
-                      height: 0,
-                    }}
-                    animate={{
-                      height: "auto",
-                    }}
-                    exit={exit}
-                    transition={{
-                      delay: 2 * 0.5,
-                    }}
-                  >
-                    <div className="Tecnologías">
+                  <div className="caracteristics">
+                    <div className="technologies">
                       <h4>Tecnologías</h4>
 
                       <ul>
@@ -226,61 +119,37 @@ const DetallePage = (props: PageProps<Queries.DetallePageQuery>) => {
                         ))}
                       </ul>
                     </div>
-                  </motion.div>
+                  </div>
                 </div>
-                <motion.div
-                  className="image image-item"
-                  initial={{
-                    opacity: 0,
-                  }}
-                  animate={{
-                    opacity: 1,
-                  }}
-                  exit={exit}
-                  transition={{
-                    delay: 3,
-                  }}
-                >
+                <div className="image image-item">
                   <ImagenDetalle
                     src={projectData.startImg}
                     index={1}
                     onClick={() => setSelectedId(1)}
                   />
-                </motion.div>
-              </div>
+                </div>
+              </motion.div>
 
-              <motion.h3
-                className="gallery-title"
-                initial={{
-                  opacity: 0,
-                }}
-                animate={{
-                  opacity: 1,
-                }}
-                exit={exit}
-                transition={{
-                  delay: 2 * 0.5,
-                }}
-              >
+              <motion.h3 className="gallery-title" {...opacityMotion}>
                 Galeria
               </motion.h3>
 
               <motion.div
                 className="gallery"
-                variants={container}
                 initial="hidden"
                 animate="visible"
+                {...containerMotion}
               >
                 {projectData.gallery?.map((item: any, index: number) => (
                   <motion.div
                     className="image-item"
                     key={index}
-                    variants={itemLi}
+                    {...itemLiMotion}
                   >
                     <ImagenDetalle
                       src={item}
-                      index={index + 2}
-                      onClick={() => setSelectedId(index + 2)}
+                      index={index * 2}
+                      onClick={() => setSelectedId(index * 2)}
                     />
                   </motion.div>
                 ))}

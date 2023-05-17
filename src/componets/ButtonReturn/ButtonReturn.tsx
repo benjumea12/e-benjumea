@@ -1,4 +1,6 @@
 import React from "react"
+// Theme
+import { opacityMotion } from "../../theme"
 // Styled components
 import { Main } from "./ButtonReturn.styled"
 import SVGArrow from "../SVGArrow"
@@ -10,30 +12,9 @@ const ButtonReturn = (props: {
   title: string
   inverted?: boolean
 }) => {
-  const exit = {
-    opacity: 0,
-    transition: {
-      delay: 0,
-      duration: 0.3,
-    },
-  }
   return (
     <Main onClick={props.onClick} inverted={props.inverted}>
-      <motion.div
-        style={{
-          overflow: "hidden",
-        }}
-        initial={{
-          translateX: "-100vh",
-        }}
-        animate={{
-          translateX: "-0",
-        }}
-        transition={{
-          delay: 7,
-        }}
-        exit={exit}
-      >
+      <motion.div {...opacityMotion}>
         <h4>{props.title}</h4>
         <SVGArrow />
       </motion.div>
