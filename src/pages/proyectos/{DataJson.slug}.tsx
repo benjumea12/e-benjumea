@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { FC, useState } from "react"
 import type { HeadFC, PageProps } from "gatsby"
 import { graphql } from "gatsby"
 // Components
@@ -15,7 +15,7 @@ import { Layout } from "../../componets"
 import { motion, AnimatePresence } from "framer-motion"
 import { opacityMotion, containerMotion, itemLiMotion } from "../../theme"
 // Images
-import { IoIosClose } from "react-icons/Io"
+import { IoIosClose } from "react-icons/io"
 
 const ImagenDetalle = (props: { src: any; index: number; onClick: any }) => {
   return (
@@ -32,7 +32,7 @@ const ImagenDetalle = (props: { src: any; index: number; onClick: any }) => {
   )
 }
 
-const DetallePage = (props: PageProps<Queries.DetallePageQuery>) => {
+const DetallePage: FC<PageProps<Queries.DetallePageQuery>> = (props) => {
   const [selectedId, setSelectedId] = useState<any>(null)
   const [showPage, setShowPage] = useState(true)
 
@@ -42,14 +42,12 @@ const DetallePage = (props: PageProps<Queries.DetallePageQuery>) => {
   return (
     <Layout>
       <AnimatePresence>
+        <SVGPrincess key="image-content" />
+
         <Modal>
           <AnimatePresence>
             {selectedId && (
-              <motion.div
-                className="modal-overlay"
-                {...modalOverlayMotion}
-                key="modal-presence"
-              >
+              <motion.div className="modal-overlay" {...modalOverlayMotion}>
                 <motion.div className="modal-image">
                   <motion.img
                     className="image"
@@ -69,96 +67,86 @@ const DetallePage = (props: PageProps<Queries.DetallePageQuery>) => {
           </AnimatePresence>
         </Modal>
 
-        {showPage && (
-          <React.Fragment key="content-presence">
-            <Main key="main-content">
-              <motion.div className="content-top" {...opacityMotion}>
-                <div className="info-section">
-                  {projectData.personal ? (
-                    <h5>Proyecto personal</h5>
-                  ) : (
-                    <h5>
-                      Proyecto de{" "}
-                      <a href="https://solucionsoft.com/" target="_blank">
-                        @SOLUCIONSOFT
-                      </a>
-                    </h5>
-                  )}
+        <Main key="main-content">
+          <motion.div className="content-top" {...opacityMotion}>
+            <div className="info-section">
+              {projectData.personal ? (
+                <h5>Proyecto personal</h5>
+              ) : (
+                <h5>
+                  Proyecto de{" "}
+                  <a href="https://solucionsoft.com/" target="_blank">
+                    @SOLUCIONSOFT
+                  </a>
+                </h5>
+              )}
 
-                  <h1>{projectData.title}</h1>
-                  <p>{projectData.description}</p>
+              <h1>{projectData.title}</h1>
+              <p>{projectData.description}</p>
 
-                  <div className="caracteristics">
-                    <div className="technologies">
-                      <h4>Tecnologías</h4>
+              <div className="caracteristics">
+                <div className="technologies">
+                  <h4>Tecnologías</h4>
 
-                      <ul>
-                        {projectData.development?.map(
-                          (item: any, index: number) => (
-                            <li key={`technology-${index}`}>
-                              <h6>{item}</h6>
-                            </li>
-                          )
-                        )}
-                      </ul>
-                    </div>
-                    <div className="links">
-                      <h4>Links</h4>
-
-                      <ul>
-                        {projectData.links?.map((item: any, index: number) => (
-                          <li key={`link-${index}`}>
-                            <a
-                              href={
-                                typeof item?.link === "string"
-                                  ? item?.link
-                                  : "#"
-                              }
-                            >
-                              {item?.name}
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
+                  <ul>
+                    {projectData.development?.map(
+                      (item: any, index: number) => (
+                        <li key={index}>
+                          <h6>{item}</h6>
+                        </li>
+                      )
+                    )}
+                  </ul>
                 </div>
-                <div className="image image-item">
-                  <ImagenDetalle
-                    src={projectData.startImg}
-                    index={1}
-                    onClick={() => setSelectedId(1)}
-                  />
+                <div className="links">
+                  <h4>Links</h4>
+
+                  <ul>
+                    {projectData.links?.map((item: any, index: number) => (
+                      <li key={index}>
+                        <a
+                          href={
+                            typeof item?.link === "string" ? item?.link : "#"
+                          }
+                        >
+                          {item?.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              </motion.div>
+              </div>
+            </div>
+            <div className="image image-item">
+              <ImagenDetalle
+                src={projectData.startImg}
+                index={1}
+                onClick={() => setSelectedId(1)}
+              />
+            </div>
+          </motion.div>
 
-              <motion.h3 className="gallery-title" {...opacityMotion}>
-                Galeria
-              </motion.h3>
+          <motion.h3 className="gallery-title" {...opacityMotion}>
+            Galeria
+          </motion.h3>
 
-              <motion.div
-                className="gallery"
-                initial="hidden"
-                animate="visible"
-                {...containerMotion}
-              >
-                {projectData.gallery?.map((item: any, index: number) => (
-                  <motion.div
-                    className="image-item"
-                    key={`image-${index}`}
-                    {...itemLiMotion}
-                  >
-                    <ImagenDetalle
-                      src={item}
-                      index={index * 2}
-                      onClick={() => setSelectedId(index * 2)}
-                    />
-                  </motion.div>
-                ))}
+          <motion.div
+            className="gallery"
+            initial="hidden"
+            animate="visible"
+            {...containerMotion}
+          >
+            {projectData.gallery?.map((item: any, index: number) => (
+              <motion.div className="image-item" key={index} {...itemLiMotion}>
+                <ImagenDetalle
+                  src={item}
+                  index={index * 2}
+                  onClick={() => setSelectedId(index * 2)}
+                />
               </motion.div>
-            </Main>
-          </React.Fragment>
-        )}
+            ))}
+          </motion.div>
+        </Main>
       </AnimatePresence>
     </Layout>
   )

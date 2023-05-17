@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from "react"
+import React, { FC, useState, Fragment } from "react"
 import type { HeadFC, PageProps } from "gatsby"
 import { navigate } from "gatsby"
 import { RiWhatsappFill } from "react-icons/ri"
@@ -18,7 +18,7 @@ import {
   ButtonReturn,
 } from "../componets"
 
-const IndexPage: React.FC<PageProps> = () => {
+const IndexPage: FC<PageProps> = () => {
   const [showPage, setShowPage] = useState(true)
 
   const handleClick = () => {
@@ -27,7 +27,6 @@ const IndexPage: React.FC<PageProps> = () => {
       navigate("/proyectos")
     }, 600)
   }
-
   return (
     <Layout>
       <AnimatePresence>

@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react"
+import React, { FC, Fragment, useState } from "react"
 import type { HeadFC, PageProps } from "gatsby"
 import { graphql, navigate } from "gatsby"
 // Components
@@ -11,7 +11,7 @@ import { opacityMotion, containerMotion, itemLiMotion } from "../../theme"
 // Frame motion
 import { motion, AnimatePresence } from "framer-motion"
 
-const ProyectosPage = (props: PageProps<Queries.ProyectosPageQuery>) => {
+const ProyectosPage: FC<PageProps<Queries.ProyectosPageQuery>> = (props) => {
   const [showPage, setShowPage] = useState(true)
 
   const projects: any = props.data.allDataJson.edges
