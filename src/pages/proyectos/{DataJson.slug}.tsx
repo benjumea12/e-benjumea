@@ -42,12 +42,14 @@ const DetallePage = (props: PageProps<Queries.DetallePageQuery>) => {
   return (
     <Layout>
       <AnimatePresence>
-        <SVGPrincess key="image-content" />
-
         <Modal>
           <AnimatePresence>
             {selectedId && (
-              <motion.div className="modal-overlay" {...modalOverlayMotion}>
+              <motion.div
+                className="modal-overlay"
+                {...modalOverlayMotion}
+                key="modal-presence"
+              >
                 <motion.div className="modal-image">
                   <motion.img
                     className="image"
@@ -68,7 +70,7 @@ const DetallePage = (props: PageProps<Queries.DetallePageQuery>) => {
         </Modal>
 
         {showPage && (
-          <React.Fragment>
+          <React.Fragment key="content-presence">
             <Main key="main-content">
               <motion.div className="content-top" {...opacityMotion}>
                 <div className="info-section">
@@ -93,7 +95,7 @@ const DetallePage = (props: PageProps<Queries.DetallePageQuery>) => {
                       <ul>
                         {projectData.development?.map(
                           (item: any, index: number) => (
-                            <li key={index}>
+                            <li key={`technology-${index}`}>
                               <h6>{item}</h6>
                             </li>
                           )
@@ -105,7 +107,7 @@ const DetallePage = (props: PageProps<Queries.DetallePageQuery>) => {
 
                       <ul>
                         {projectData.links?.map((item: any, index: number) => (
-                          <li key={index}>
+                          <li key={`link-${index}`}>
                             <a
                               href={
                                 typeof item?.link === "string"
@@ -143,7 +145,7 @@ const DetallePage = (props: PageProps<Queries.DetallePageQuery>) => {
                 {projectData.gallery?.map((item: any, index: number) => (
                   <motion.div
                     className="image-item"
-                    key={index}
+                    key={`image-${index}`}
                     {...itemLiMotion}
                   >
                     <ImagenDetalle
