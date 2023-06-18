@@ -57,7 +57,10 @@ const IndexPage: FC<PageProps> = () => {
                   que sea un apasionado por su trabajo y tenga muchas ganas de
                   romperla no dudes en contactarme.
                 </p>
-                <a href="https://drive.google.com/file/d/1YO69Yh8nTTfnxsX_vMSb3faPfdV_hZhy/view?usp=sharing">
+                <a
+                  target="_blank"
+                  href="https://drive.google.com/drive/folders/1eKZfFjzHSxNt-61-IRN9GsCuZO-Ib9NM?usp=sharing"
+                >
                   Descargar mi CV
                 </a>
                 <div className="redes">
