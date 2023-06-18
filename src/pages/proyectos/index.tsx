@@ -65,7 +65,10 @@ const ProyectosPage: FC<PageProps<Queries.ProyectosPageQuery>> = (props) => {
 export default ProyectosPage
 
 export const Head: HeadFC = () => (
-  <title>E-Benjumea | Proyectos Favoritos</title>
+  <>
+    <title>E-Benjumea | Proyectos Favoritos</title>
+    <meta property="og:image" content="https://i.imgur.com/nubB0AR.png" />
+  </>
 )
 
 export const query = graphql`

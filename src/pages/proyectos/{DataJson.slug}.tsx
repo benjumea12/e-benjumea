@@ -155,7 +155,10 @@ const DetallePage: FC<PageProps<Queries.DetallePageQuery>> = (props) => {
 export default DetallePage
 
 export const Head: FC<PageProps<Queries.DetallePageQuery>> = (props) => (
-  <title>E-Benjumea | {props.data.allDataJson.edges[0].node.title}</title>
+  <>
+    <title>E-Benjumea | {props.data.allDataJson.edges[0].node.title}</title>
+    <meta property="og:image" content="https://i.imgur.com/nubB0AR.png" />
+  </>
 )
 
 export const query = graphql`
