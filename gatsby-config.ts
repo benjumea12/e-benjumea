@@ -2,7 +2,7 @@ import type { GatsbyConfig } from "gatsby"
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `E Benjumea`,
+    title: `E-Benjumea`,
     siteUrl: `https://www.yourdomain.tld`,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
@@ -17,6 +17,17 @@ const config: GatsbyConfig = {
       options: {
         name: `src`,
         path: `${__dirname}/src/data`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `E-Benjumea`,
+        short_name: `E-Benjumea`,
+        description: `Mi portafolio de proyectos favoritos.`,
+        lang: `es`,
+        icon: `${__dirname}/src/images/icon.svg`,
+        start_url: `/`,
       },
     },
   ],

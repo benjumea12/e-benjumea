@@ -19,6 +19,7 @@
     "babel-plugin-styled-components": "^2.1.1",
     "framer-motion": "^10.12.12",
     "gatsby": "^5.9.1",
+    "gatsby-plugin-manifest": "^5.11.0",
     "gatsby-plugin-styled-components": "^6.10.0",
     "gatsby-source-filesystem": "^5.10.0",
     "gatsby-transformer-json": "^5.10.0",
