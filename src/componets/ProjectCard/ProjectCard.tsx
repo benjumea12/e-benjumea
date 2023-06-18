@@ -11,7 +11,7 @@ import image from "../../images/cartel.png"
 const ProjectCard = (props: { project: any }) => {
   const { project } = props
   return (
-    <Main>
+    <Main color={project.color}>
       <img src={project.startImg} alt={project.title} />
       <div className="card-content">
         <h2>{project.title}</h2>

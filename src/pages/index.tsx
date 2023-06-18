@@ -92,4 +92,4 @@ const IndexPage: FC<PageProps> = () => {
 
 export default IndexPage
 
-export const Head: HeadFC = () => <title>Home Page</title>
+export const Head: HeadFC = () => <title>E-Benjumea | Inicio</title>

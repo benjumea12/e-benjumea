@@ -1,8 +1,9 @@
 {
   "slug": "del-menu",
-  "order": 6,
+  "order": 2,
   "personal": false,
   "title": "DelMenu",
+  "color": "#83da95",
   "startImg": "https://i.imgur.com/jT1136S.jpg",
   "description": "App de corrientasos para restaurantes. La comida familiar de toda la vida, ahora más cerca de ti.",
   "development": [

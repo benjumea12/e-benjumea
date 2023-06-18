@@ -64,7 +64,9 @@ const ProyectosPage: FC<PageProps<Queries.ProyectosPageQuery>> = (props) => {
 
 export default ProyectosPage
 
-export const Head: HeadFC = () => <title>Home Page</title>
+export const Head: HeadFC = () => (
+  <title>E-Benjumea | Proyectos Favoritos</title>
+)
 
 export const query = graphql`
   query ProyectosPage {
@@ -75,6 +77,7 @@ export const query = graphql`
           order
           title
           startImg
+          color
         }
       }
     }

@@ -154,7 +154,9 @@ const DetallePage: FC<PageProps<Queries.DetallePageQuery>> = (props) => {
 
 export default DetallePage
 
-export const Head: HeadFC = () => <title>Home Page</title>
+export const Head: FC<PageProps<Queries.DetallePageQuery>> = (props) => (
+  <title>E-Benjumea | {props.data.allDataJson.edges[0].node.title}</title>
+)
 
 export const query = graphql`
   query DetallePage($slug: String) {

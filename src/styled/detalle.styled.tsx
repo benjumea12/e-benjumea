@@ -43,6 +43,9 @@ export const Main = styled.div`
         .technologies,
         .links {
           width: 45%;
+          a {
+            font-weight: bold;
+          }
         }
         h4 {
           margin-bottom: 0.8rem;
@@ -54,7 +57,7 @@ export const Main = styled.div`
           a,
           h6 {
             font-weight: 500;
-            font-size: clamp(0.8rem, 1vw, 3rem);
+            font-size: clamp(0.8rem, 1.2vw, 3.3rem);
             font-family: "Lato", sans-serif;
             color: ${(props) => props.theme.colors.dark};
           }

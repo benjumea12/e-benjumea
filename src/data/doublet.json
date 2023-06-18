@@ -1,8 +1,9 @@
 {
   "slug": "doublet",
-  "order": 4,
+  "order": 6,
   "personal": true,
   "title": "Doublet",
+  "color": "#829ed6",
   "startImg": "https://i.imgur.com/kU7gy6p.png",
   "description": "App para entrenar tu habilidad mental",
   "development": ["React Native", "React Hooks", "TypeScript"],

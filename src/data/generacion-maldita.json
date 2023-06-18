@@ -1,0 +1,26 @@
+{
+  "slug": "generacion-maldita",
+  "order": 1,
+  "color": "#cacaca",
+  "personal": true,
+  "title": "Generación Maldita",
+  "startImg": "https://i.imgur.com/jnewgbz.png",
+  "description": "GMA es colectivo de artistas con el compromiso de mostrar nuestro talento y creatividad a través de los distintos medios y formatos, como cortos de animación, ilustraciones, fanzines y trabajos personales. Nuestro objetivo es crear una comunidad que valore y promueva el cine y el arte en todas sus formas.",
+  "development": ["Vue JS", "Wordpress", "Sass", "MySql"],
+  "links": [
+    {
+      "name": "Página",
+      "link": "https://generacionmaldita.com/"
+    },
+    {
+      "name": "Diseño del proyecto",
+      "link": "https://www.figma.com/file/KGjXyN2EXwrXkbKFUsVb6I/Generaci%C3%B3n-Maldita?type=design&node-id=0-1"
+    }
+  ],
+  "gallery": [
+    "https://i.imgur.com/WfQ7rXb.png",
+    "https://i.imgur.com/QjOeZG0.png",
+    "https://i.imgur.com/JSa8A4Q.png",
+    "https://i.imgur.com/vclbiDX.png"
+  ]
+}

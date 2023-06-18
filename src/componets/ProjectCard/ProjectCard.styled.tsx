@@ -3,7 +3,7 @@ import styled from "styled-components"
 // Theme
 import { media } from "../../theme"
 
-export const Main = styled.div`
+export const Main = styled.div<{ color?: string }>`
   width: 100%;
   margin-bottom: 5em;
   position: relative;
@@ -51,7 +51,7 @@ export const Main = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #ffffdb;
+    background-color: ${(props) => props.color ?? "#ffffdb"};
     border: 2px solid ${(props) => props.theme.colors.dark};
     transition: all 200ms 0ms ease-in-out;
     padding: 0 10%;
