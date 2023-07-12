@@ -85,7 +85,7 @@ const IndexPage: FC<PageProps> = () => {
                 </div>
               </motion.div>
             </Main>
-            <ButtonReturn onClick={handleClick} title="Proyectos faforitos" />
+            <ButtonReturn onClick={handleClick} title="Proyectos favoritos" />
           </Fragment>
         )}
       </AnimatePresence>
