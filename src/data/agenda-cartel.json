@@ -5,7 +5,7 @@
   "title": "Agenda Cartel",
   "color": "#def898",
   "startImg": "https://i.imgur.com/z6WQQS1.png",
-  "description": "Sistema de administracion de eventos y productos. Se desarrolló sitio web, dashboard y cms de productos con Wordpress (Proyecto desarrollado en @SOLUCIONSOFT)",
+  "description": "Sistema de administracion de eventos y productos. Se desarrolló sitio web, dashboard y cms de productos con Wordpress",
   "development": ["React JS", "Redux", "TypeScript", "Sass", "WordPress"],
   "links": [
     {
