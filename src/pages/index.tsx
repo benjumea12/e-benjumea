@@ -47,15 +47,15 @@ const IndexPage: FC<PageProps> = () => {
               <motion.div className="section-text" {...opacityMotion}>
                 <h2>FrontEnd Web/Movil</h2>
                 <p>
-                  Si lo que buscas es alguien con excelente dominio en el
-                  desarrollo FrontEnd tanto Web como Movil, habilidades para el
-                  diseño UI y UX y conocimientos sobre el desarrollo BackEnd y
-                  bases de datos.
-                </p>
-                <p>
-                  Con muchos deseos de mejorar mi experiencia y conocimientos,
-                  que sea un apasionado por su trabajo y tenga muchas ganas de
-                  romperla no dudes en contactarme.
+                  Soy un apasionado desarrollador con un sólido dominio en el
+                  ámbito del Frontend. Poseo una destacada capacidad para
+                  realizar el maquetado de interfaces con estilos y animaciones
+                  personalizadas. Mis conocimientos técnicos abarcan tecnologías
+                  como HTML, CSS y JavaScript, y cuento con experiencia en el
+                  uso de React tanto para aplicaciones web como para
+                  aplicaciones móviles utilizando React Native. <br /> Además,
+                  poseo habilidades en el diseño UI/UX, y conocimientos de
+                  BackEnd y bases de datos.
                 </p>
                 <a
                   target="_blank"
